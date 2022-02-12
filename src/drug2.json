@@ -5,6 +5,7 @@
       "key": "birthday",
       "isRequired": true,
       "order": 1,
+      "value":"",
       "isReadonly": false,
       "type": "date"
     },
@@ -23,6 +24,7 @@
       "key": "sex",
       "isRequired": true,
       "order": 2,
+      "value":"",
       "isReadonly": false,
       "type": "dropdown"
     },
@@ -31,6 +33,7 @@
       "key": "weight",
       "isRequired": true,
       "order": 3,
+      "value":"",
       "unit": "kg",
       "isReadonly": false,
       "type": "number"

@@ -1,4 +1,7 @@
-const Input = ({ id, lable, placeholder, isRequired, type }) => {
+import { useContext } from "react";
+import { FormContext } from "../FormContext";
+const Input = ({ id, lable, placeholder, isRequired, value, type }) => {
+  const { handleChangeInput } = useContext(FormContext);
   return (
     <div className="form-group">
       <label className="col-xs-4 control-label" htmlFor="exampleInputAge">
@@ -7,11 +10,12 @@ const Input = ({ id, lable, placeholder, isRequired, type }) => {
       <div className="col-xs-8">
         <input
           className="date form-control"
-          data-date-format="yyyy/mm/dd"
-          id={id}
-          type={type}
           placeholder={placeholder}
-          isRequired={isRequired}
+          value={value}
+          name={value}
+          type={type}
+          onChange={(e) => handleChangeInput(id, e)}
+          required
         />
       </div>
     </div>
